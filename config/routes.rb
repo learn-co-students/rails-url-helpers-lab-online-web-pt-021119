@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-	scope(path_names: { edit: 'activate' }) do
-		resources :students
-	end
+	resources :students
+
+	get '/students/:id/activate', to: 'students#activate', as: 'activate_student'
 
 
 end
